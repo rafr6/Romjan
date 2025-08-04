@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Romjan ID Card</title>
+  <link href="style.css" rel="stylesheet" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <div id="card" class="id-card">
+    <div class="header">
+      <img src="logo.png" class="logo" alt="Company Logo">
+      <h2>AFCONS INFRASTRUCTURE LTD.</h2>
+      <p>PROJECT: RPCL 400 MW COMBINED CYCLE POWER PLANT</p>
+      <p>MEGHNAGHAT, SONARGAON, NARAYANGANJ</p>
+    </div>
+    <div class="photo-section">
+      <img src="romjan.jpg" alt="Holder Photo" class="photo">
+    </div>
+    <div class="info">
+      <p><strong>Emp Code:</strong> 257370</p>
+      <p><strong>Name:</strong> Md Romjan Mia</p>
+      <p><strong>Job Title:</strong> Welder</p>
+      <p><strong>Blood Group:</strong> B+</p>
+      <p><strong>Address:</strong> Jatrapur, Ashuganj, Ashuganj-3402, Brahmanbaria, Chattogram</p>
+      <p><strong>Phone:</strong> +880 1767679277</p>
+    </div>
+    <div class="signature-section">
+      <div class="signature-left">Signature of Holder</div>
+      <div class="signature-right">Managing Director</div>
+    </div>
+  </div>
+  <button id="download" class="download-button">Download as PDF</button>
+  <script src="script.js"></script>
+</body>
+</html>
