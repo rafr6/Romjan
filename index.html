@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Romjan ID Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f5f5f5;
+      margin: 0;
+    }
+    .card {
+      width: 336px;
+      height: 528px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      position: relative;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background-image: url('watermark.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+    .logo {
+      width: 80px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .photo {
+      width: 100px;
+      height: 120px;
+      object-fit: cover;
+      border: 1px solid #333;
+      display: block;
+      margin: 10px auto;
+    }
+    .info {
+      margin-top: 10px;
+    }
+    .label {
+      font-weight: normal;
+      font-size: 14px;
+    }
+    .value {
+      font-weight: bold;
+      font-size: 15px;
+    }
+    .address {
+      white-space: pre-line;
+    }
+    .signature-section {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      font-size: 13px;
+    }
+    #downloadBtn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 14px;
+      border: none;
+      background: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    @media print {
+      #downloadBtn {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card" id="card">
+    <div class="header">
+      <img src="afcons.png" class="logo" />
+      <span><strong>EMP CODE:</strong> 257370</span>
+    </div>
+    <img src="romjan.jpg" class="photo" alt="Cardholder Photo" />
+    <div class="info">
+      <div><span class="label">Name:</span> <span class="value">Md Romjan Mia</span></div>
+      <div><span class="label">Job Title:</span> <span class="value">Welder</span></div>
+      <div><span class="label">Blood Group:</span> <span class="value">B+</span></div>
+      <div><span class="label">Phone:</span> <span class="value">+880 1767679277</span></div>
+      <div class="label">Address:</div>
+      <div class="value address">Jatrapur, Ashuganj,<br>Ashuganj-3402,<br>Brahmanbaria, Chattogram</div>
+    </div>
+    <div class="signature-section">
+      <div>Signature of holder</div>
+      <div>Managing Director</div>
+    </div>
+  </div>
+  <button id="downloadBtn" onclick="printCard()">Download as PDF</button>
+
+  <script>
+    function printCard() {
+      const btn = document.getElementById('downloadBtn');
+      btn.style.display = 'none';
+      window.print();
+      setTimeout(() => {
+        btn.style.display = 'block';
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
