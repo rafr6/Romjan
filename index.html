@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ID Card</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card" id="card">
+    <div class="header">
+      <img src="logo-left.png" alt="Left Logo" class="logo" />
+      <h2>AFCONS INFRASTRUCTURE LIMITED</h2>
+      <img src="logo-right.png" alt="Right Logo" class="logo" />
+    </div>
+    <div class="photo-section">
+      <img src="photo.jpg" alt="Cardholder Photo" class="photo"/>
+    </div>
+    <div class="info">
+      <p><strong>Name:</strong> AJHARUL ISLAM</p>
+      <p><strong>Designation:</strong> Safety Supervisor</p>
+      <p><strong>ID No:</strong> AF-1022</p>
+      <p><strong>Blood Group:</strong> B+</p>
+      <p><strong>Mobile:</strong> 01730-000000</p>
+      <p><strong>Address:</strong> Jatrapur, Ashuganj, Ashuganj-3402<br/>Brahmanbaria, Chattogram</p>
+    </div>
+    <div class="signatures">
+      <div class="sig-block">
+        <div class="label">Signature Holder</div>
+        <img src="signature-user.png" alt="Cardholder Signature" class="signature"/>
+      </div>
+      <div class="sig-block">
+        <div class="label">Managing Director</div>
+        <img src="signature-director.png" alt="Director Signature" class="signature"/>
+        <img src="seal.png" alt="Director Seal" class="seal"/>
+      </div>
+    </div>
+    <div class="footer-line"></div>
+  </div>
+  <button id="downloadBtn" onclick="downloadPDF()">Download as PDF</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
