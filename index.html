@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ID Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .download-btn {
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background-color: #003366;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    @media print {
+      .download-btn {
+        display: none;
+      }
+    }
+    .card {
+      width: 320px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    .logos {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .logos img {
+      width: 80px;
+      height: auto;
+    }
+    .photo {
+      width: 120px;
+      height: 140px;
+      border: 1px solid #ccc;
+      margin: 0 auto 10px;
+      background-size: cover;
+      background-position: center;
+    }
+    h2 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+    }
+    .info {
+      text-align: left;
+      margin-top: 10px;
+    }
+    .info p {
+      margin: 4px 0;
+      font-size: 14px;
+    }
+    .info span.label {
+      font-weight: normal;
+      color: #333;
+    }
+    .info span.value {
+      font-weight: bold;
+    }
+    .signatures {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 25px;
+      align-items: center;
+    }
+    .signatures img {
+      height: 35px;
+    }
+    .signatures p {
+      font-size: 12px;
+      margin-top: 5px;
+    }
+    .signatures .right-signature {
+      position: relative;
+    }
+    .seal {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 50px;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+    .signature-line {
+      height: 2px;
+      background: #003366;
+      width: 80%;
+      margin: 15px auto 0 auto;
+    }
+    .footer {
+      margin-top: 10px;
+      background: #003366;
+      color: white;
+      padding: 6px;
+      font-size: 14px;
+      border-radius: 0 0 10px 10px;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="window.print()" class="download-btn">Download PDF</button>
+  <div class="card">
+    <div class="logos">
+      <img src="logo-left.png" alt="Left Logo">
+      <img src="logo-right.png" alt="Right Logo">
+    </div>
+    <div class="photo" style="background-image: url('photo.jpg');"></div>
+    <h2>Emp Code: <strong>257370</strong></h2>
+    <h2>Md Romjan Mia</h2>
+    <div class="info">
+      <p><span class="label">Job Title:</span> <span class="value">Welder</span></p>
+      <p><span class="label">Blood Group:</span> <span class="value">B+</span></p>
+      <p><span class="label">Phone:</span> <span class="value">+880 1767679277</span></p>
+      <p><span class="label">Address:</span><br>
+        <span class="value">Jatrapur, Ashuganj, Ashuganj-3402<br>
+        Brahmanbaria, Chattogram</span></p>
+    </div>
+    <div class="signatures">
+      <div>
+        <img src="sign-left.png" alt="Signature Left">
+        <p>Signature of Holder</p>
+      </div>
+      <div class="right-signature">
+        <img src="sign-right.png" alt="Signature Right">
+        <img class="seal" src="seal.png" alt="Seal">
+        <p>Managing Director</p>
+      </div>
+    </div>
+    <div class="signature-line"></div>
+    <div class="footer">AFCONS INFRASTRUCTURE LIMITED</div>
+  </div>
+</body>
+</html>
